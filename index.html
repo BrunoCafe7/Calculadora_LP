@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Patrimônio Ideal | Diversa Academy</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    
+    <!-- Importando Fontes: Open Sans e Material Symbols Outlined -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <style>
         :root {
             /* Paleta de Cores Rhian Private */
             --Diversa-dark: #001529;
@@ -139,14 +143,22 @@
         .input-icon {
             position: absolute;
             left: 14px;
-            color: var(--text-muted);
-            font-size: 14px;
+            color: var(--Diversa-dark);
+            font-size: 20px; 
             pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Ajuste específico para o Material Symbols Outlined */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
         input {
             width: 100%;
-            padding: 14px 14px 14px 40px;
+            padding: 14px 14px 14px 48px; 
             border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 16px;
@@ -453,7 +465,7 @@
                 <div class="form-group">
                     <label>Idade</label>
                     <div class="input-wrapper">
-                        <span class="input-icon">📅</span>
+                        <span class="material-symbols-outlined input-icon">calendar_month</span>
                         <input type="number" name="idade" id="idade" placeholder="Ex: 30" required min="1" max="120">
                     </div>
                 </div>
@@ -470,14 +482,14 @@
                 <div class="form-group">
                     <label>Bens Totais</label>
                     <div class="input-wrapper">
-                        <span class="input-icon">🏠</span>
+                        <span class="material-symbols-outlined input-icon">other_houses</span>
                         <input type="text" name="bens" id="bens" placeholder="0,00" onkeyup="formatCurrency(this)">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Investimentos</label>
                     <div class="input-wrapper">
-                        <span class="input-icon">📈</span>
+                        <span class="material-symbols-outlined input-icon">account_balance_wallet</span>
                         <input type="text" name="dinheiro" id="dinheiro" placeholder="0,00" onkeyup="formatCurrency(this)">
                     </div>
                 </div>
@@ -486,7 +498,7 @@
             <div class="form-group">
                 <label>Dívidas (Empréstimos, Cartões)</label>
                 <div class="input-wrapper">
-                    <span class="input-icon">⚠️</span>
+                    <span class="material-symbols-outlined input-icon">warning</span>
                     <input type="text" name="dividas" id="dividas" placeholder="0,00" onkeyup="formatCurrency(this)">
                 </div>
             </div>
@@ -500,14 +512,14 @@
                 <div class="form-group">
                     <label>E-mail</label>
                     <div class="input-wrapper">
-                        <span class="input-icon">✉️</span>
+                        <span class="material-symbols-outlined input-icon">mail</span>
                         <input type="email" name="email" id="email" placeholder="seu@email.com" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>WhatsApp</label>
                     <div class="input-wrapper">
-                        <span class="input-icon">📱</span>
+                        <span class="material-symbols-outlined input-icon">sms</span>
                         <input type="tel" name="whatsapp" id="whatsapp" placeholder="(00) 00000-0000" required maxlength="15">
                     </div>
                 </div>
