@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Patrimônio Ideal | Diversa Academy</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
         :root {
             /* Paleta de Cores Rhian Private */
             --Diversa-dark: #001529;
@@ -27,7 +29,7 @@
         * { box-sizing: border-box; outline: none; }
 
         body {
-            font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+            font-family: 'Open Sans', 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
             background-color: var(--bg-body);
             margin: 0;
             padding: 0;
@@ -57,7 +59,7 @@
 
         .hero h1 {
             margin: 10px 0 0;
-            font-size: 26px;
+            font-size: 36px;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -88,7 +90,7 @@
 
         @media (max-width: 600px) {
             .content { padding: 25px; }
-            .hero h1 { font-size: 22px; }
+            .hero h1 { font-size: 28px; }
             .logo-img { max-width: 220px; }
         }
 
@@ -159,7 +161,7 @@
             box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15);
         }
 
-        /* Botão */
+        /* Botão Principal */
         .btn {
             width: 100%;
             background: var(--Diversa-yellow);
@@ -309,6 +311,78 @@
             border-left: 4px solid var(--Diversa-yellow);
             font-size: 15px;
             color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* --- Faixa Próximo Passo --- */
+        .next-step-strip {
+            background: linear-gradient(135deg, var(--Diversa-dark), var(--Diversa-light));
+            border-radius: 12px;
+            padding: 35px 30px;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+            box-shadow: 0 10px 25px rgba(0, 21, 41, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-step-strip h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            color: var(--Diversa-yellow);
+            font-weight: 700;
+        }
+
+        .next-step-strip .subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .next-step-strip .description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #dcdcdc;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .next-step-strip .email-note {
+            font-size: 12px;
+            color: var(--Diversa-yellow);
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--Diversa-dark);
+            text-decoration: none;
+            padding: 14px 28px;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            background: var(--Diversa-yellow);
+            color: white;
         }
 
         /* --- Rodapé --- */
@@ -470,6 +544,16 @@
                 </div>
 
                 <div class="conselho-box" id="conselho"></div>
+
+                <!-- FAIXA: PRÓXIMO PASSO -->
+                <div class="next-step-strip">
+                    <h3>Próximo Passo: cuide das suas finanças com estratégia</h3>
+                    <p class="subtitle">Você já sabe onde está. Agora descubra para onde ir.</p>
+                    <p class="description">Liberamos um acesso gratuito a relatórios, e conteúdos práticos para transformar números em decisões inteligentes, feitos para o seu perfil de investidor.</p>
+                    <span class="email-note">Verifique na sua caixa de e-mail!</span>
+                    <a href="https://wa.me/554433466200?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20em%20investimentos%20para%20entender%20as%20melhores%20op%C3%A7%C3%B5es%20para%20o%20meu%20perfil." target="_blank" class="btn-cta">QUERO AVANÇAR PARA O PRÓXIMO PASSO</a>
+                </div>
+
             </div>
 
         </form>
